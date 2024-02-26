@@ -1,0 +1,484 @@
+.user-home-container {
+    width: 100vw;
+    height: calc(1 - 20vh);
+    overflow-y: hidden;
+}
+
+/* 个人资料 */
+.user-card {
+    width: 50%;
+    height: 249px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: rgba(232, 244, 248, 0.6);
+    box-shadow:  5px 0 11px #a9b2b5,
+             -5px -5px 11px #ffffff;
+    margin-top: 20px;
+    border-bottom: 1px dashed #666;
+}
+
+.user-card .user-info {
+    height: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+.user-card .user-info.left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px dashed #666;
+}
+
+.user-info.left img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.user-info.left .user-name {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.user-info.left .person-operation {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info.left .person-operation button {
+    width: 100px;
+    height: 35px;
+    color: #666666;
+    padding: 0.1em 0.2em;
+    margin: 20px 10px;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+}
+
+.user-info.left .person-operation button:hover {
+    border: 1px solid white;
+}
+
+.user-info.left .person-operation button:active {
+    box-shadow: 4px 4px 12px #c5c5c5,
+                -4px -4px 12px #ffffff;
+}
+
+.user-info.right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info.right div {
+    width: 100%;
+    height: 50%;
+    font-weight: 300;
+    display: flex;
+}
+
+.user-info.right .email {
+    font-size: 23px;
+    align-items: center;
+    border-bottom: 1px dashed #666;
+}
+
+.user-info.right .signature {
+    font-size: 18px;
+}
+/* 个人资料结束 */
+
+/* tab栏开始 */
+:root {
+	--primary-color: #185ee0;
+	--secondary-color: #e6eef9;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.el-dialog__header .el-dialog__title {
+    color: rgb(24, 20, 20);
+}
+
+.el-dialog__body {
+    padding: 0 !important;
+}
+
+/* 修改个人资料开始 */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: #fff;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    box-shadow: 100px 100px 80px rgba(0, 0, 0, 0.03)
+}
+
+.el-upload {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.form .avatar {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(23, 111, 211);
+    border-radius: 50%;
+    align-self: center;
+    padding: 1px;
+    cursor: pointer;
+    box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
+}
+
+.input, .el-input__inner {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 16px 10px;
+    background-color: rgb(247, 243, 243);
+    border-radius: 10px;
+    box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
+    color: #666 !important;
+}
+
+.el-input .el-input__count-inner {
+    background: none !important;
+}
+
+.input:focus, .el-input__inner:focus {
+    border: 1px solid rgb(23, 111, 211);
+}
+
+#file {
+    display: none;
+}
+/* 修改个人资料结束 */
+
+/* 修改密码开始 */
+.pwd-box {
+    width: 100%;
+    padding: 40px;
+    /* background: rgba(24, 20, 20, 0.987); */
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+
+.pwd-box .user-box {
+    position: relative;
+}
+
+.pwd-box .user-box input {
+    width: 100%;
+    font-size: 16px;
+    color: rgba(24, 20, 20, 0.987);
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 1px solid rgba(24, 20, 20, 0.987);
+    outline: none;
+    background: transparent;
+}
+
+.pwd-box .user-box label {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgba(24, 20, 20, 0.987);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.pwd-box .user-box input:focus ~ label,
+.pwd-box .user-box input:valid ~ label {
+    top: -25px;
+    left: 0;
+    color: rgba(24, 20, 20, 0.443);
+    font-size: 12px;
+}
+
+.pwd-box form .pwd-submit-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(24, 20, 20);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    border: none;
+    background: none;
+}
+
+.pwd-box .pwd-submit-btn:hover {
+    background: #D3D3D3;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #D3D3D3,
+            0 0 12px #D3D3D3,
+            0 0 20px #D3D3D3,
+            0 0 50px #D3D3D3;
+}
+
+/* 发布点赞浏览记录开始 */
+.tabs-container {
+    width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tabs {
+    width: 50%;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+	padding: 0.75rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow:  5px 5px 11px #a9b2b5,
+             -5px 0 11px #ffffff !important;
+}
+
+.tabs-hostory {
+    width: 50%;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+	padding: 0.75rem;
+    box-shadow:  5px 0 0 #a9b2b5,
+             -5px 0 11px #ffffff !important;
+}
+
+.tabs * {
+    z-index: 2;
+}
+
+.tabs-hostory * {
+    z-index: 2;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+.tab {
+    flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+    width: 33%;
+	font-size: 1.15rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+}
+
+.notification {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: 0.75rem;
+	border-radius: 50%;
+	background-color: var(--secondary-color);
+	transition: 0.15s ease-in;
+}
+
+input[type="radio"]:checked + label {
+    color: var(--primary-color);
+}
+
+input[type="radio"]:checked + label  > .notification {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+input[id="radio-1"]:checked ~ .glider {
+    transform: translateX(0);
+}
+
+/* input[id="radio-2"]:checked ~ .glider {
+    transform: translateX(100%);
+} */
+
+input[id="radio-3"]:checked ~ .glider {
+    transform: translateX(100%);
+}
+
+input[id="radio-4"]:checked ~ .glider {
+    transform: translateX(200%);
+}
+
+.glider {
+	position: absolute;
+	display: flex;
+	height: 40px;
+    width: 16%;
+	background-color: var(--secondary-color);
+	z-index: 1;
+	border-radius: 99px;
+	transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+	.tabs {
+		transform: scale(0.6);
+	}
+}
+/* tab栏开始结束 */
+
+.personal-homepage {
+    width: 100%;
+    align-items: center;
+}
+
+/* 浏览记录开始 */
+.browse-history {
+    width: 100%;
+}
+
+.city-or-post {
+    width: 50%;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+	padding: 0.75rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow:  5px 5px 11px #a9b2b5,
+             -5px 0 11px #ffffff !important;
+    margin: 0 auto;
+}
+
+.city-or-post * {
+    z-index: 2;
+}
+
+.city-or-post .tab {
+    flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+    width: 25%;
+	font-size: 1.15rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+}
+
+input[id="city-or-post-1"]:checked ~ .glider {
+    transform: translateX(0);
+}
+
+input[id="city-or-post-2"]:checked ~ .glider {
+    transform: translateX(100%);
+}
+
+.city-or-post .glider {
+	position: absolute;
+	display: flex;
+	height: 30px;
+    width: 24%;
+	background-color: var(--secondary-color);
+	z-index: 1;
+	border-radius: 99px;
+	transition: 0.25s ease-out;
+}
+
+/* 城市浏览记录开始 */
+.city-history {
+    width: 100%;
+    margin-top: 2%;
+}
+
+.city-history .city-content {
+    width: 80%;
+    margin: 0 auto;
+}
+  
+.city-history .content-list-item {
+    display:flex;
+    align-items:center;
+    height: 180px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius:10px;
+    box-shadow: 0 10px 15px rgba(23,126,247,0.25);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.city-history .content-list-item-open {
+    display:flex;
+    align-items:center;
+    margin-bottom: 30px;
+    border-radius:10px;
+    box-shadow: 0 10px 15px rgba(23,126,247,0.25);
+    border: 1px solid rgba(108, 108, 108, 0.2);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.city-history .item-img {
+    height: 100%;
+}
+
+.city-history .item-img img {
+    height: 100%;
+    max-width: 180px;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+}
+
+.city-history .item-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.city-history .heading {
+    display: flex;
+    flex-direction: row;
+    height: 22%;
+}
+
+.city-history .item-text p {
+    height: 60%;
+    text-indent: 2em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.city-history .el-pagination.is-background {
+    width: 100%;
+}
+/* 城市浏览记录结束 */
+/* 浏览记录结束 */

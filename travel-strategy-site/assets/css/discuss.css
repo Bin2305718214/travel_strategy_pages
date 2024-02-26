@@ -1,0 +1,452 @@
+.discuss-container {
+    width: 100vw;
+    height: calc(1 - 20vh);
+    align-items: center;
+    /* background: rgba(255, 255, 255, 0.2); */
+    -webkit-mask-image: linear-gradient(
+        0deg, rgb(255, 255, 255),
+		99%, transparent);
+}
+
+.v-modal {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.publish {
+    width: 86%;
+    height: 80px;
+}
+
+.publish button {
+    margin: 2rem auto;
+    float: right;
+    background-color: #FFDAB9;
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 120px;
+    font-size: 1.2rem;
+    padding-top: 0px;
+    padding: 10px 15px;
+    border-radius: .25rem
+}
+
+.publish button {
+    transition: background .6s ease-out;
+    background: #FF4500 radial-gradient(circle, transparent 1%, #FF4500 1%) center/15000%;
+}
+
+.publish button:active {
+    background-color: #FFDAB9;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.post-list {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    width: 95%;
+    height: 220px;
+    background: rgba(245, 245, 245, 0.8);
+    padding: 0.8rem 1.5rem 2rem 1.5rem;
+    border-radius: 5px;
+    margin: 32px 0;
+    transition: box-shadow .3s ease, transform .2s ease;
+}
+
+.card-info {
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+.card-user-info {
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 5%;
+    opacity: 1;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.card-avatar {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin: 0 10px 1rem 10px;
+}
+
+.card-name {
+    color: #333;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+.card-info .head-title {
+    transform: translateY(50%);
+    margin-top: -1%;
+    font-size: 32px;
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 62%;
+}
+
+.card-content img {
+    transform: translateY(-20%) translateX(20%) scale(1.5);
+    width: 20%;
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 5px;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.card-content p {
+    transform: translateX(20%);
+    color: #2F4F4F;
+    font-size: 1.1em;
+    text-indent: 2em;
+    line-height: 2em;
+    margin-top: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    opacity: 0;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Card footer */
+.card-social {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.card-social__item {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: #515F65;
+}
+
+.card-social__item svg {
+    display: block;
+    height: 25px;
+    width: 25px;
+    margin: 0 6px;
+    fill: #515F65;
+    cursor: pointer;
+    transition: fill 0.2s ease ,transform 0.2s ease;
+}
+
+.hearthBtn {
+    animation: heartButton 0.4s !important;
+}
+
+.data-load {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+    color: #555;
+}
+
+.data-load.load {
+    height: 100%;
+    padding: 10px 0;
+    color: #333;
+    font-weight: 500;
+    background: rgba(230, 230, 230, 0.2)
+}
+
+.noData {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3%;
+}
+
+.noData div {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    color: #777;
+}
+
+/* 添加帖子 */
+li span {
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.el-dialog__header {
+    height: 80px;
+    background: url(../images/add_post_bg.jpg) left -80px;
+}
+
+.el-dialog__header i {
+    padding: 4px;
+    color: #fff !important;
+    background: rgba(226, 94, 54, 0.9);
+    border-radius: 50%;
+}
+
+.el-dialog__title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+}
+
+.el-dialog__body {
+    background: #e8e8e8;
+    padding: 10px !important;
+}
+
+.add-form {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.add-form ul {
+    list-style: none;
+    padding-left: 0 !important;
+}
+
+.add-form ul li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 标题输入框 */
+.wave-group {
+    position: relative;
+}
+
+.wave-group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 40%;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+
+.wave-group .input:focus {
+    outline: none;
+}
+
+.wave-group .label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+}
+
+.wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #5264AE;
+}
+
+.wave-group .bar {
+    width: 40%;
+    position: relative;
+    display: block;
+}
+
+.wave-group .bar:before,.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+    left: 50%;
+}
+
+.wave-group .bar:after {
+    right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.avatar-uploader .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+    border-color: #409EFF;
+}
+.avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 128px;
+    height: 128px;
+    line-height: 128px;
+    text-align: center;
+}
+.avatar {
+    width: 128px;
+    height: 128px;
+    display: block;
+}
+
+/* 封面图 */
+.el-upload-list__item li div {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.el-upload-list__item-thumbnail {
+    width: 148px !important;
+    height: 148px !important;
+}
+
+/* 提交按钮 */
+.btn-submit button {
+    width: 20%;
+    position: relative;
+    height: 40px;
+    padding: 0 30px;
+    margin-top: 20px;
+    border: 2px solid #000;
+    background: #e8e8e8;
+    user-select: none;
+    white-space: nowrap;
+    transition: all .05s linear;
+    font-family: inherit;
+}
+
+.btn-submit button:before, .btn-submit button:after {
+    content: "";
+    position: absolute;
+    background: #e8e8e8;
+    transition: all .2s linear;
+}
+
+.btn-submit button:before {
+    width: calc(100% + 6px);
+    height: calc(100% - 16px);
+    top: 8px;
+    left: -3px;
+}
+
+.btn-submit button:after {
+    width: calc(100% - 16px);
+    height: calc(100% + 6px);
+    top: -3px;
+    left: 8px;
+}
+
+.btn-submit button:hover {
+    cursor: crosshair;
+}
+
+.btn-submit button:active {
+    transform: scale(0.95);
+}
+
+.btn-submit button:hover:before {
+    height: calc(100% - 28px);
+    top: 16px;
+}
+
+.btn-submit button:hover:after {
+    width: calc(100% - 28px);
+    left: 16px;
+}
+
+.btn-submit button span {
+    font-size: 15px;
+    z-index: 3;
+    position: relative;
+    font-weight: 600;
+}
+
+/* 动画效果 */
+.discuss-container .card:hover {
+    box-shadow: 0 12px 50px #23232333;
+}
+
+
+.discuss-container .card:hover .card-user-info {
+    transform: translateY(-30%);
+    opacity: 0;
+}
+
+.discuss-container .card:hover .card-content img {
+    transform: translateY(-10%) translateX(0%) scale(1.1);
+}
+
+.discuss-container .card:hover .head-title {
+    transform: translateY(-200%);
+}
+
+.discuss-container .card:hover p {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.discuss-container .card:hover .card-social {
+    transform: translateY(-20%);
+}
+
+.discuss-container .card-social__item svg:hover {
+    fill: #232323;
+    transform: scale(1.1);
+}
+
+@keyframes heartButton {
+    0% {
+        transform: scale(1);
+    }
+   
+    50% {
+        transform: scale(1.6);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

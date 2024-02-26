@@ -1,0 +1,578 @@
+.discuss-detail-container {
+    width: 100vw;
+    font-family: 'Old Standard TT', serif;
+}
+
+/* 顶部按钮栏开始 */
+.top-btn {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+    height: 9vh;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 返回按钮开始 */
+.goback-discuss-btn {
+    display: flex;
+    height: 50px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: rgba(245, 245, 245, 0.3);
+}
+
+.goback-discuss-btn > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+.goback-discuss-btn:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+.goback-discuss-btn:hover {
+    box-shadow: 6px 6px 21px #d1d1d1, -6px -6px 21px #4598d4;
+    transform: translateY(-2px);
+}
+/* 返回按钮结束 */
+
+/* 删除按钮开始 */
+.delete-post-btn {
+    position: absolute;
+    right: 1%;
+    top: 2vh;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: rgba(230, 34, 34, 0.8);
+    margin-right: 0 !important;
+}
+
+.delete-post-btn, .delete-post-btn span {
+    transition: 200ms;
+}
+
+.delete-post-btn .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+}
+
+.delete-post-btn .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-post-btn svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.delete-post-btn:hover {
+    background: #ff3636;
+}
+
+.delete-post-btn:hover .text {
+    color: transparent;
+}
+
+.delete-post-btn:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.delete-post-btn:focus {
+    outline: none;
+}
+
+.delete-post-btn:active .icon svg {
+    transform: scale(0.8);
+}
+/* 删除按钮结束 */
+/* 顶部按钮栏结束 */
+
+.post-detail {
+    width: 98%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    background: rgba(250, 250, 210, 0.24);
+    border-radius: 8px;
+}
+
+.detail-header {
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    background: rgba(255, 218, 185, 0.4);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 2px solid #F4A460;
+}
+
+.detail-header .user-info {
+    width: 20%;
+    height: 60px;
+    line-height: 60px;
+}
+
+.detail-header .user-info .user-avatar {
+    --size: 50px;
+    width: var(--size);
+    height: var(--size);
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.detail-header .user-info .user-name {
+    font-size: 1.5rem;
+}
+
+.detail-title {
+    width: 70%;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.detail-title:before,
+.detail-title:after {
+    flex: 1;
+    content: "";
+    display: block;
+    height: 0;
+    border-top: 1px solid #212121;
+    margin: 0 10px;
+}
+
+/* 发布时间 */
+.release-time {
+    width: 15%;
+    font-size: 1rem;
+    /* color: rgba(225, 255, 255, 0.9); */
+}
+
+.detail-content {
+    width: 100%;
+    padding: 5px 20px;
+    background: rgba(255, 218, 185, 0.4);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* 帖子内容 */
+.detail-content pre {
+    line-height: 2em;
+    font-size: 22px;
+    font-weight: lighter;
+    margin-bottom: 4%;
+}
+
+/* 帖子附带图片 */
+.content-imgs-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.content-img {
+    width: 26vw;
+    line-height: 12vh;
+    margin: 1vh 2vw;
+}
+
+.content-img img {
+    width: 100%;
+    height: 22vh;
+    border-radius: 10px;
+    background: #e2dfdf;
+    box-shadow:  8px 8px 16px #b9b7b7,
+             -8px -8px 16px #ffffff;
+}
+
+.content-img div {
+    font-size: 20px;
+    color: 	#2F4F4F;
+    text-align: center;
+    margin-top: -9vh;
+}
+
+/* 评论区 */
+.user-comments {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border-radius: 6px;
+    background: rgba(255, 239, 213, 0.6);
+    padding: 20px 0;
+}
+
+.comments-input-unlogin {
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comments-input-unlogin button {
+    --primary-color: rgba(	255, 165, 0, 0.7);
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.comments-input-unlogin button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comments-input-unlogin button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+.comments-input-unlogin button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+.comments-input-unlogin button:hover {
+    background-color: var(--hover-color);
+}
+
+.comments-input-unlogin button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+.comments-input-unlogin button:hover .arrow:before {
+    right: 0;
+}
+
+/* 评论输入框 */
+.comments-input {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comments-input input {
+    width: 80%;
+    line-height: 32px;
+    border: 2px solid transparent;
+    border-bottom-color: #777;
+    padding: .2rem 0;
+    outline: none;
+    background-color: transparent;
+    color: #2F4F4F;
+    font-size: 1.1rem;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.comments-input input:focus, input:hover {
+    outline: none;
+    padding: .2rem 1rem;
+    border-radius: 0.4rem;
+    border-color: #2F4F4F;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.comments-input input::placeholder {
+    color: #2F4F4F;
+}
+
+.comments-input input:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+/* 发送评论按钮 */
+.comments-input button {
+    outline: none;
+    color: #DAA06D;
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border: 2px dashed #DAA06D;
+    border-radius: 15px;
+    background-color: #EADDCA;
+    box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+    transition: .1s ease-in-out, .4s color;
+}
+
+.comments-input button:active {
+    transform: translateX(0.1em) translateY(0.1em);
+    box-shadow: 0 0 0 4px #EADDCA, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.comments-list {
+    list-style: none;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 10px 0;
+}
+
+.comments-list li {
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-radius: 6px;
+    box-shadow:  -1px -1px 3px #d5bd97,
+             1px 1px 3px #85775f;
+}
+
+.comments-list .noReply {
+    height: 18vh;
+}
+
+.comments-list .liReply {
+    height: 23vh;
+}
+
+.comments-list li .item-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+}
+
+.item-user div {
+    flex: 1;
+}
+
+.item-user .user-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-user .user-info .user-avatar {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.item-user .user-info .user-name {
+    flex: none;
+    margin-right: 25px;
+}
+
+.item-user .user-info .author-sign {
+    font-size: 12px;
+    color: #000;
+    width: 40px;
+    text-align: center;
+    padding: 0px 5px;
+    background: rgba(236, 31, 31, 0.6);
+    border-radius: 15px;
+}
+
+.comment-deleted {
+    color: #777;
+}
+
+/* 删除按钮开始 */
+.item-user .delete-my-comment {
+    flex: 1;
+    text-align: right;
+}
+
+.delete-my-comment button {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border: 0px solid transparent;
+    background-color: rgba(100,77,237,0.08);
+    border-radius: 1.25em;
+    transition: all 0.2s linear;
+}
+
+.delete-my-comment button:hover {
+    box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025),
+     8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+     17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+     36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+     99px 72px 143px rgba(0, 0, 0, 0.08);
+   }
+
+.delete-my-comment button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.delete-my-comment button span {
+    width: 20px; visibility: hidden;
+    width: 4em;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 110%;
+}
+
+.delete-my-comment button span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
+}
+
+.delete-my-comment button:hover span {
+    visibility: visible;
+}
+/* 删除按钮结束 */
+
+.comments-list .comment-info {
+    width: 100%;
+    text-indent: 2em;
+    padding: 0 26px;
+}
+
+.comment-info p {
+    line-height: 1.6rem;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+
+.comment-info .comment-bottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.reply button {
+    background-color: rgba(240, 240, 240, 0.7);
+    border-radius: 16px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    letter-spacing: .25px;
+    line-height: normal;
+    padding: 8px 16px;
+    transition: background box-shadow 280ms ease;
+}
+   
+.reply button:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+}
+   
+.reply button:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+    border: 2px solid #4285f4;
+}
+
+.el-pagination button {
+    background: none !important;
+    margin: 0 10px;
+}
+
+.el-pager li {
+    background: none !important;
+    margin: 0 6px;
+}
+
+.post-detail-noData {
+    width: 100%;
+    padding: 20px;
+    margin-top: 5vh;
+}
+
+.post-detail-noData div {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    color: #777;
+}
+
+.post-detail-noData svg {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
